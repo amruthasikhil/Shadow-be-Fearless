@@ -1,0 +1,23 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table table-bordered">
+    <tr>
+      <th>SI.No</th>
+      <th>Visual</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td><img src="{{ i["File_Name"] }}" width="200" height="250" &nbsp;</td>
+      <td>{{ i["Location"] }}&nbsp;</td>
+      <td>{{ i["Date"] }}&nbsp;</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

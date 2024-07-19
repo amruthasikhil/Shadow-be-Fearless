@@ -1,0 +1,18 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/adm_edit_siteee_post">
+  <table width="200" border="1">
+    <tr>
+      <td>Message</td>
+      <td><textarea name="textarea" id="textarea" cols="45" rows="5">{{ data['Message'] }}</textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><input type="submit" name="Add" id="Add" value="UPDATE" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+

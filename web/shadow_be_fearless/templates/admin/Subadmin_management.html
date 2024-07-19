@@ -1,0 +1,78 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form action="/adm_edit_subadm_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="textfield" class="form-control" required id="textfield" value="{{ data['Name'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+
+         <td><select name="gen" id="select2" class="form-control" required>
+          <option value="{{ data['Gender'] }}">{{ data['Gender'] }}</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+
+
+      </select></td>
+
+
+
+
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><input type="date" name="textfield2" id="textfield2" value="{{ data['DOB'] }}" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><input type="text" name="textfield6" id="textfield6" value="{{ data['City'] }}"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+          <option value="malappuram"{% if data['State'] == 'malappuram' %} selected {% endif %}>malappuram</option>
+          <option value="kozhikkod"{% if data['State'] == 'kozhikkod' %} selected {% endif %}>kozhikkod</option>
+          <option value="palakkad"{% if data['State'] == 'palakkad' %} selected {% endif %}>palakkad</option>
+          <option value="kannur"{% if data['State'] == 'kannur' %} selected {% endif %}>kannur</option>
+          <option value="trissur"{% if data['State'] == 'trissur' %} selected {% endif %}>trissur</option>
+
+      </select></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><select name="select" id="select" class="form-control" required>
+          <option value="kerala"{% if data['State'] == 'kerala' %} selected {% endif %}>kerala</option>
+          <option value="karnadaka"{% if data['State'] == 'karnadaka' %} selected {% endif %}>karnadaka</option>
+          <option value="tamilnadu"{% if data['State'] == 'tamilnadu' %} selected {% endif %}>tamilnadu</option>
+          <option value="goa"{% if data['State'] == 'goa' %} selected {% endif %}>goa</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><input type="text" name="textfield7" class="form-control" required id="textfield7" value="{{ data['Pin'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Phone No</td>
+      <td><input type="text" name="textfield3" class="form-control" required id="textfield3" value="{{ data['Phone_Number'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Email Id</td>
+      <td><input type="text" name="textfield4" class="form-control" required id="textfield4" value="{{ data['Email_id'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Image</td>
+      <td><input type="file" name="fileField" class="form-control"  id="fileField"  /></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" class="btn btn-success" id="button" value="ADD" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

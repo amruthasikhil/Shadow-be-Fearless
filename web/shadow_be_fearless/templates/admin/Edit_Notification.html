@@ -1,0 +1,18 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/adm_edit_notif_post">
+  <table class="table">
+    <tr>
+      <td>Message</td>
+      <td><textarea name="textarea" required class="form-control" id="textarea" cols="45" rows="5">{{ data['Message'] }}</textarea></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="Add" id="Add" value="UPDATE" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+

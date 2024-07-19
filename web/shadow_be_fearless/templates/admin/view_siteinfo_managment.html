@@ -1,0 +1,25 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table table-bordered">
+    <tr>
+      <th>Sl.No</th>
+      <th>Message</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+       {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['Message']}}&nbsp;</td>
+      <td><a href="/adm_edit_site/{{ i['Info_id'] }}" class="btn btn-success">EDIT</a></td>
+      <td><a href="/adm_delete_site/{{ i['Info_id'] }}" class="btn btn-danger">DELETE</a></td>
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
+

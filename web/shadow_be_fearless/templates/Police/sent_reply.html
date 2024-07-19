@@ -1,0 +1,15 @@
+{% extends 'Police/polindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="/sents">
+  <table class="table table-bordered">
+
+    <tr>
+      <td>Reply</td>
+      <td><input type="text" name="c" id="textfield3"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td colspan="2" align='center'><input type="submit" class="btn btn-success" name="button" id="button" value="ADD" /></td>
+    </tr>
+  </table>
+</form>
+{% endblock %}

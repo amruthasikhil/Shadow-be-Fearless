@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shadow_be_fearless">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".jjj"
+            android:label="@string/title_activity_jjj"></activity>
+        <activity android:name=".Police_add_visuals" />
+        <activity android:name=".Pubviewpolice" />
+        <activity
+            android:name=".Public_home"
+            android:label="@string/title_activity_public_home" />
+        <activity android:name=".Complaintreply" />
+        <activity
+            android:name=".Policehomepage"
+            android:label="@string/title_activity_policehomepage"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".user_chat" />
+        <activity android:name=".user_view_share_idea" />
+        <activity android:name=".User_Share_idea" />
+
+        <service android:name=".Shake" />
+
+        <uses-library android:name="org.apache.http.legacy" />
+
+        <activity android:name=".user_view_emergency_no" />
+        <activity android:name=".view_added_dang_user" />
+        <activity android:name=".user_view_notif" />
+        <activity android:name=".user_emerg_help" />
+        <activity android:name=".user_view_emerg" />
+        <activity android:name=".user_edit_emer_no" />
+        <activity android:name=".user_emer_no" />
+        <activity android:name=".user_safe" />
+        <activity android:name=".user_view_reply" />
+        <activity android:name=".user_send_compl" />
+        <activity android:name=".public_view_police" />
+        <activity android:name=".public_view_spot" />
+        <activity android:name=".user_search" />
+        <activity android:name=".user_view_dang" />
+        <activity android:name=".user_edit_dang" />
+        <activity android:name=".user_add_dangerspot" />
+        <activity android:name=".Userregistration" />
+        <activity android:name=".user_nearby" />
+        <activity android:name=".Test" />
+        <activity android:name=".user_profile" />
+        <activity android:name=".Test2" />
+        <activity android:name=".User_chng_pwd" />
+        <activity android:name=".user_registeration" />
+        <activity android:name=".userhomepage" />
+
+        <service android:name=".LocationService" />
+
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".change_password" />
+        <activity android:name=".add_dangerous_manag" />
+        <activity android:name=".dang_manag" />
+        <activity android:name=".view_complaint" />
+        <activity android:name=".view_emerg" />
+        <activity android:name=".Police_view_profile" />
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

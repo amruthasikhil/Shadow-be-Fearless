@@ -1,0 +1,26 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/adm_add_allocation_post">
+  <table  class="table table-bordered">
+    <tr>
+      <th>Sl.No</th>
+      <th>Vehicle</th>
+      <th>Police</th>
+      <th>&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['Register_Number'] }}&nbsp;</td>
+      <td><img src="{{ i['Image'] }}" height="100" width="100"/><br>
+          {{ i['Name'] }}&nbsp;</td>
+      <td><a href="/adm_delete_allocation/{{ i['Allocate_id'] }}" class="btn btn-danger">DELETE</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
+

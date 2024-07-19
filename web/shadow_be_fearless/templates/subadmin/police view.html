@@ -1,0 +1,32 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+<table class="table table-bordered">
+    <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Gender<br>DOB</td>
+    <th>Address</td>
+    <th>Contact Info</td>
+
+    <th>&nbsp;</td>
+    <th>&nbsp;</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td width="5px">{{ loop.index }}&nbsp;</td>
+    <td>{{ i['Name'] }}&nbsp;<br><img src="{{ i['Image'] }}" width="50" height="50">&nbsp;</td>
+      <td>{{ i['Gender'] }}&nbsp;<br>{{ i['DOB'] }}&nbsp;</td>
+    <td>{{ i['Station_Name'] }}&nbsp;<br>{{ i['City'] }}&nbsp;<br>{{ i['District'] }}<br>{{ i['State'] }}<br>{{ i['Pin'] }}&nbsp;</td>
+
+    <td>{{ i['Phone_Number'] }}&nbsp;<br>{{ i['Email_id'] }}&nbsp;</td>
+      <td><a href="http://maps.google.com/?q={{ i['lati'] }},{{ i['longi'] }}" class="btn btn-outline-success">Location</a></td>
+      <td width="20px"><a href="/sa_visual_send/{{ i['Login_id'] }}" class="btn btn-info">View Visual</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

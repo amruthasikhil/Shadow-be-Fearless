@@ -1,0 +1,29 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+
+<body>
+<form action="/sa_edit_safe_point_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+    <input type="hidden" name="sid" value="{{ data['Safe_id'] }}"/>
+
+    <table  class="table">
+    <tr>
+      <td>Location</td>
+      <td><input type="text" name="textfield" id="textfield" value="{{ data['Location'] }}"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Latitude</td>
+      <td><input type="text" name="textfield2" id="textfield2" value="{{ data['Latitude'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Longitude</td>
+      <td><input type="text" name="textfield5" id="textfield5" value="{{ data['Longitude'] }}" class="form-control" required/></td>
+      
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" id="button" value="Update" class="btn btn-success" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

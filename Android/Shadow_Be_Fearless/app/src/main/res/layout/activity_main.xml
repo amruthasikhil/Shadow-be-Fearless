@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <TableRow
+        android:layout_width="431dp"
+        android:layout_height="38dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="398dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="40"
+
+            android:text="WELCOME"
+            android:textColor="#000"
+            android:textStyle="bold"/>
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="289dp"
+            android:layout_height="58dp"
+            android:background="@drawable/df"
+            android:ems="10"
+            android:hint="Enter ip Address"
+            android:inputType="textPersonName"
+            android:padding="@dimen/activity_horizontal_margin" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="102dp"
+        android:gravity="center">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttcolo"
+            android:text="Go"
+            android:textColor="#fff" />
+    </TableRow>
+</LinearLayout>

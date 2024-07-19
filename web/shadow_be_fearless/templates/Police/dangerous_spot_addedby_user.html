@@ -1,0 +1,27 @@
+{% extends 'Police/polindex.html' %}
+{% block body %}
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered">
+    <tr>
+      <th>SI NO</th>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+      <th>&nbsp;</th>
+    </tr>
+        {% for i in data %}
+    <tr>
+      <td>{{loop.index }}&nbsp;</td>
+      <td>{{ i['Location'] }}&nbsp;</td>
+      <td>{{ i['Latitude'] }}&nbsp;</td>
+      <td>{{ i['Longitude'] }}&nbsp;</td>
+      <td><a href="http://maps.google.com/?q={{ i['Latitude'] }},{{ i['Longitude'] }}" class="btn btn-outline-success">Map</a></td>
+      <td><a href="/pol_view_dangerous_approve/{{ i['Dangerous_id'] }}" class="btn btn-info">Accept</a></td>
+      <td><a href="/pol_view_dangerous_reject/{{ i['Dangerous_id'] }}" class="btn btn-danger">Reject</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

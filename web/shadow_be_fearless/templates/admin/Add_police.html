@@ -1,0 +1,98 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+<body>
+<form action="/adm_add_police_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="textfield" class="form-control" required id="textfield" /></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td><select name="gen" id="select2" class="form-control" required>
+          <option value="select">--select--</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+
+
+      </select></td>
+
+
+
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><input type="date" name="textfield2" id="textfield2" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Station Name</td>
+      <td><input type="text" name="textfield5" id="textfield5"  class="form-control" required/></td>
+      
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><input type="text" name="textfield6" id="textfield6" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+          <option value="select">--select--</option>
+          <option value="malappuram">malappuram</option>
+          <option value="kozhikkod">kozhikkod</option>
+          <option value="palakkad">palakkad</option>
+          <option value="kannur">kannur</option>
+          <option value="trissur">trissur</option>
+
+      </select></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><select name="select" id="select" class="form-control" required>
+          <option value="select">--select--</option>
+          <option value="kerala">kerala</option>
+          <option value="karnadaka">karnadaka</option>
+          <option value="tamilnadu">tamilnadu</option>
+          <option value="goa">goa</option>
+      </select></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><input type="text" name="textfield7" id="textfield7" class="form-control" pattern="[0-9]{6}" required /></td>
+    </tr>
+    <tr>
+      <td>Phone No</td>
+      <td><input type="text" name="textfield3" id="textfield3" class="form-control" pattern="[0-9]{10}" required /></td>
+    </tr>
+    <tr>
+      <td>Email Id</td>
+      <td><input type="email" name="textfield4" id="textfield4"  class="form-control" required/></td>
+    </tr>
+
+
+      <tr>
+      <td>Latitude</td>
+      <td><input type="text" name="lt" id="textfield7" class="form-control"  required /></td>
+    </tr>
+    <tr>
+      <td>Longitude</td>
+      <td><input type="text" name="lg" id="textfield3" class="form-control"  required /></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><input type="text" name="pl" id="textfield4"  class="form-control" required/></td>
+    </tr>
+
+
+    <tr>
+      <td>Image</td>
+      <td><input type="file" name="pic" id="textfield4" class="form-control" required /></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" id="button"  class="btn btn-success" value="Submit" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+
+{% endblock %}

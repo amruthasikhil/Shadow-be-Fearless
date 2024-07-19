@@ -1,0 +1,24 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table table-bordered">
+    <tr>
+      <th>Sl.No</th>
+      <th>Name</th>
+      <th>Feedback</th>
+      <th>Date</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['Name'] }}&nbsp;</td>
+      <td>{{ i['Feedback'] }}&nbsp;</td>
+      <td>{{ i['Date'] }}&nbsp;</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}
+

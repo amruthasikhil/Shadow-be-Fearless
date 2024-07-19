@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single"/>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home2"
+            android:title="@string/menu_home" />
+
+    <item
+        android:id="@+id/nav_user_profile"
+        android:icon="@drawable/uu"
+        android:title="View Profile" />
+
+
+    <item
+        android:id="@+id/nav_user_emer_no"
+        android:icon="@drawable/ss"
+        android:title="Add Emergency Number" />
+    <item
+        android:id="@+id/nav_user_view_emergency_no"
+        android:icon="@drawable/view1"
+        android:title="View Emergency Number " />
+
+
+    <item
+        android:id="@+id/nav_User_Share_idea"
+        android:icon="@drawable/star"
+        android:title="Add Share idea" />
+    <item
+        android:id="@+id/nav_User_view_Share_idea"
+        android:icon="@drawable/view1"
+        android:title="View Share idea" />
+
+
+        <item
+            android:id="@+id/nav_user_view_dang"
+            android:icon="@drawable/view1"
+            android:title="View Dangerous Spot" />
+
+    <item
+        android:id="@+id/nav_user_nearby"
+        android:icon="@drawable/nn"
+        android:title="User View Nearby Person" />
+
+    <item
+        android:id="@+id/tt"
+        android:icon="@drawable/nn"
+        android:title="View Police" />
+
+
+
+
+             <item
+              android:id="@+id/nav_user_send_compl"
+                 android:title="Send Complaint"
+                 android:icon="@drawable/ic_menu_send"/>
+            <item
+                android:id="@+id/nav_user_view_reply"
+                android:icon="@drawable/view1"
+                android:title="View Reply" />
+            <item
+                android:id="@+id/nav_user_safe"
+                android:icon="@drawable/eye1"
+                android:title="View Safe points" />
+
+
+    <item
+        android:id="@+id/nn"
+        android:icon="@drawable/ic_notifications_black_24dp"
+        android:title="View Notification" />
+
+
+    <item
+        android:id="@+id/nav_user_add_dangerspot"
+        android:icon="@drawable/pencil"
+        android:title="Add Dangerous Spot" />
+
+
+
+
+    <item
+        android:id="@+id/nav_user_chat"
+        android:icon="@drawable/bub"
+        android:title="Chat" />
+
+
+
+
+    <item
+        android:id="@+id/nav_changepassword"
+        android:icon="@drawable/uu"
+        android:title="Change Password" />
+
+    <item
+        android:id="@+id/ll"
+        android:icon="@drawable/ll"
+        android:title="Log Out" />
+
+
+</menu>

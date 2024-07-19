@@ -1,0 +1,27 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+<body>
+<form id="form1" name="form1" method="post" action="">
+  <table  class="table table-bordered">
+    <tr>
+      <th>Sl.No</th>
+      <th>Location</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>&nbsp;</th>
+      <td>&nbsp;</td>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{loop.index }}&nbsp;</td>
+      <td>{{ i['Location'] }}&nbsp;</td>
+      <td>{{ i['Latitude'] }}&nbsp;</td>
+      <td>{{ i['Longitude'] }}&nbsp;</td>
+      <td><a href="/sa_edit_safe_point/{{ i['Safe_id'] }}" class="btn btn-success">EDIT</a></td>
+      <td><a href="/sa_delete_safe_point/{{ i['Safe_id'] }}" class="btn btn-danger">DELETE</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+</body>
+{% endblock %}

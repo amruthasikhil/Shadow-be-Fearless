@@ -1,0 +1,34 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form action="/adm_edit_vehicle_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table">
+    <tr>
+      <td>Reg No.</td>
+      <td><input type="text" name="textfield" id="textfield"  class="form-control" required value="{{ data['Register_Number'] }}"/></td>
+    </tr>
+    <tr>
+      <td>Chassis No.</td>
+      <td><input type="text" name="textfield5" id="textfield5" class="form-control" required value="{{ data['Chasis_Number'] }}"/></td>
+      
+    </tr>
+    <tr>
+      <td>Type of vehicle</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+                    <option value="{{ data['Type_of_Vehicle'] }}">{{ data['Type_of_Vehicle'] }}</option>
+
+          <option value="bus">Bus</option>
+          <option value="car">Car</option>
+          <option value="jeep">Jeep</option>
+          <option value="bike">Bike</option>
+      </select></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" class="btn btn-success" id="button" value="Update" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+

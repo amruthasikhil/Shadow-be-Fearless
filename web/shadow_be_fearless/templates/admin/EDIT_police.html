@@ -1,0 +1,99 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+<body>
+<form action="/adm_edit_police_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table">
+    <tr>
+      <td>Name</td>
+      <td><input type="text" name="textfield" class="form-control" required  id="textfield" value="{{ data['Name'] }}"/></td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+
+      <td><select name="gen" id="select2" class="form-control" required>
+          <option value="{{ data['Gender'] }}">{{ data['Gender'] }}</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+
+
+      </select></td>
+
+
+{#      <td><input type="radio" name="radio" id="radio" value="Female" {% if data['Gender'] == 'Female' %} checked {% endif %}/>Female#}
+{#      <input type="radio" name="radio" id="radio2" value="Male"{% if data['Gender'] == 'Male' %} checked {% endif %} />Male#}
+{#      <input type="radio" name="radio" id="radio3" value="Transgender"{% if data['Gender'] == 'Transgender' %} checked {% endif %} />Transgender</td>#}
+
+
+    </tr>
+    <tr>
+      <td>DOB</td>
+      <td><input type="text" name="textfield2" class="form-control" required id="textfield2" value="{{ data['DOB'] }} "/></td>
+    </tr>
+    <tr>
+      <td>Station Name</td>
+      <td><input type="text" name="textfield5"  class="form-control" required id="textfield5" value="{{ data['Station_Name'] }}" /></td>
+    </tr>
+    <tr>
+      <td>City</td>
+      <td><input type="text" name="textfield6"  class="form-control" required id="textfield6"  value="{{ data['City'] }}"  /></td>
+    </tr>
+    <tr>
+      <td>District</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+          <option value="malappuram" {% if data['District'] == 'malappuram' %} selected {% endif %}>malappuram</option>
+           <option value="palakkad" {% if data['District'] == 'palakkad' %} selected {% endif %} >palakkad</option>
+           <option value="kannur" {% if data['District'] == 'kannur' %} selected {% endif %}>kannur</option>
+                 <option value="kozhikkod" {% if data['District'] == 'kozhikkod' %} selected {% endif %}>kozhikkod</option>
+                 <option value="trissur" {% if data['District'] == 'trissur' %} selected {% endif %}>trissur</option>
+
+      </select></td>
+    </tr>
+    <tr>
+      <td>State</td>
+      <td><select name="select" id="select" class="form-control" required>
+          <option value="kerala" {% if data['State'] == 'kerala' %} selected {% endif %}>kerala</option>
+          <option value="up"{% if data['State'] == 'up' %} selected {% endif %}>up</option>
+          <option value="tamil nadu"{% if data['State'] == 'tamil nadu' %} selected {% endif %}>tamil nadu</option>
+          </select></td>
+    </tr>
+    <tr>
+      <td>Pin</td>
+      <td><input type="text" name="textfield7" class="form-control" pattern="[0-9]{6}" required id="textfield7" value="{{ data['Pin'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Phone No</td>
+      <td><input type="text" name="textfield3" class="form-control"  pattern="[0-9]{10}" required  id="textfield3" value="{{ data['Phone_Number'] }}" /></td>
+    </tr>
+    <tr>
+      <td>Email Id</td>
+      <td><input type="text" name="textfield4" class="form-control" required id="textfield4" value="{{ data['Email_id'] }}" /></td>
+    </tr>
+
+
+    <tr>
+      <td>Latitude</td>
+      <td><input type="text" name="lt" id="textfield7" class="form-control"   value="{{ data['lati'] }}" required /></td>
+    </tr>
+    <tr>
+      <td>Longitude</td>
+      <td><input type="text" name="lg" id="textfield3" class="form-control"  value="{{ data['longi'] }}" required /></td>
+    </tr>
+    <tr>
+      <td>Place</td>
+      <td><input type="text" name="pl" id="textfield4"  class="form-control"  value="{{ data['place'] }}" required/></td>
+    </tr>
+
+
+
+    <tr>
+      <td>Image</td>
+      <td><input type="file" name="fileField" class="form-control"  id="fileField" /></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" class="btn btn-success" id="button" value="UPDATE" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

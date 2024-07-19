@@ -1,0 +1,65 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+
+
+
+<br /><table  class="table">
+  <tr>
+    <td colspan="2" align="center">&nbsp;<img src="{{ data["Image"] }}" alt="img" height="100" width="100" >&nbsp;</td>
+
+       </tr>
+     <td>Name&nbsp;</td>
+    <td>{{ data['Name'] }}</td>
+
+  </tr>
+    <tr>
+        <td>Gender&nbsp;</td>
+        <td>{{ data['Gender'] }}</td>
+    </tr>
+    <tr>
+        <td>DOB&nbsp;</td>
+        <td>{{ data['DOB'] }}</td>
+    </tr>
+    <tr>
+        <td>City&nbsp;</td>
+        <td>{{ data['City'] }}</td>
+
+
+    </tr>
+    <tr>
+        <td>District&nbsp;</td>
+        <td>{{ data['District'] }}</td>
+
+
+    </tr>
+    <tr>
+        <td>State&nbsp;</td>
+        <td>{{ data['State'] }}</td>
+
+
+    </tr>
+    <tr>
+        <td>Pin&nbsp;</td>
+        <td>{{ data['Pin'] }}</td>
+
+
+    </tr>
+    <tr>
+        <td>Phone_Number&nbsp;</td>
+        <td>{{ data['Phone_Number'] }}</td>
+
+
+    </tr>
+    <tr>
+        <td>Email_id&nbsp;</td>
+        <td>{{ data['Email_id'] }}</td>
+
+
+    </tr>
+
+</table>
+
+</form>
+</body>
+
+{% endblock %}

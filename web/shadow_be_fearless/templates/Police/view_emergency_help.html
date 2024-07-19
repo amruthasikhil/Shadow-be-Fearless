@@ -1,0 +1,26 @@
+{% extends 'Police/polindex.html' %}
+{% block body %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table class="table table-bordered">
+    <tr>
+      <th>SI NO</th>
+      <th>Name</th>
+        <th>Contacts</th>
+      <th>Date</th>
+      <th>Location</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['Name'] }}&nbsp;</td>
+              <td>&nbsp;{{ i['Phone_Number'] }}</td>
+
+        <td>{{ i['Date'] }}</td>
+      <td><a href="http://maps.google.com/?q={{ i['Latitude'] }},{{ i['Longitude'] }}" class="btn btn-outline-success">Map</a></td>
+
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+{% endblock %}

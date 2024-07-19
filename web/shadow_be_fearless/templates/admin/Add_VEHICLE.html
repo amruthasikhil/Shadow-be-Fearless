@@ -1,0 +1,32 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form action="/adm_add_vechile_post" method="post" enctype="multipart/form-data" name="form1" id="form1">
+  <table class="table">
+    <tr>
+      <td>Reg No.</td>
+      <td><input type="text" name="textfield" class="form-control" required id="textfield" /></td>
+    </tr>
+    <tr>
+      <td>Chassis No.</td>
+      <td><input type="text" name="textfield5" class="form-control" required id="textfield5" /></td>
+      
+    </tr>
+    <tr>
+      <td>Type of vehicle</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+          <option value="Car">Car</option>
+          <option value="Bus">Bus</option>
+          <option value="Bike">Bike</option>
+          <option value="Jeep">Jeep</option>
+
+      </select></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" class="btn btn-success" id="button" value="Submit" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}

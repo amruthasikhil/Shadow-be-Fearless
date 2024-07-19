@@ -1,0 +1,36 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="">
+</form>
+<table class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Gender</td>
+    <th>DOB</td>
+    <th>Address</td>
+    <th>Phone No</td>
+    <th>Email Id</td>
+    <th>&nbsp;</td>
+    <th>&nbsp;</td>
+  </tr>
+    {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}&nbsp;</td>
+    <td>{{ i['Name'] }}&nbsp;<br><img src="{{ i['Image'] }}" width="50" height="50">&nbsp;</td>
+      <td>{{ i['Gender'] }}&nbsp;</td>
+    <td>{{ i['DOB'] }}&nbsp;</td>
+    <td>{{ i['Station_Name'] }}&nbsp;<br>{{ i['City'] }}&nbsp;<br>{{ i['District'] }}<br>{{ i['State'] }}<br>{{ i['Pin'] }}&nbsp;</td>
+
+    <td>{{ i['Phone_Number'] }}&nbsp;</td>
+    <td>{{ i['Email_id'] }}&nbsp;</td>
+    <td><a href="/adm_edit_police/{{ i['Police_id'] }}" class="btn btn-success">EDIT</a></td>
+    <td><a href="/adm_delete_police/{{ i['Police_id'] }}" class="btn btn-danger">DELETE</a></td>
+  </tr>
+     {% endfor %}
+</table>
+</body>
+{% endblock %}
+

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home2"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/uu"
+            android:title="View Profile" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/nn"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/nav_tools"
+            android:icon="@drawable/view1"
+            android:title="View Emergency Help" />
+
+
+        <item
+            android:id="@+id/nav_home1"
+            android:icon="@drawable/eye1"
+            android:title="View Complaints" />
+        <item
+            android:id="@+id/nav_gallery1"
+            android:icon="@drawable/pencil"
+            android:title="Add Dangerous Spot" />
+
+
+        <item
+            android:id="@+id/nav_gallery2"
+            android:icon="@drawable/view1"
+            android:title="View all Dangerous Spot" />
+
+
+        <item
+            android:id="@+id/vv"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Add Visuals" />
+
+        <item
+            android:id="@+id/nav_slideshow1"
+            android:icon="@drawable/view1"
+            android:title="Verify Dangerous" />
+
+    </group>
+
+    <item android:title="More">
+        <menu>
+            <item
+                android:id="@+id/lkkkk"
+                android:icon="@drawable/ll"
+                android:title="Log Out" />
+
+        </menu>
+    </item>
+
+</menu>

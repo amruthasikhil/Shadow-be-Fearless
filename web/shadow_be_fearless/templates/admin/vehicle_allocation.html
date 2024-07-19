@@ -1,0 +1,30 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/adm_add_allocation_post">
+  <table class="table">
+    <tr>
+      <td>Vehicle</td>
+      <td><select name="select" id="select" class="form-control" required>
+          {% for i in data1 %}
+          <option value="{{ i['Vehicle_id'] }}">{{ i['Register_Number'] }}</option>
+          {% endfor %}
+      </select></td>
+    </tr>
+    <tr>
+      <td>Police</td>
+      <td><select name="select2" id="select2" class="form-control" required>
+          {% for i in data %}
+          <option value="{{ i['Login_id'] }}">{{ i['Name'] }}</option>
+          {% endfor %}
+      </select></td>
+    </tr>
+    <tr>
+        <td></td><td><input type="submit" name="button" id="button"  class="btn btn-success" value="ALLOCATE" /></td>
+    </tr>
+  </table>
+</form>
+</body>
+{% endblock %}
+

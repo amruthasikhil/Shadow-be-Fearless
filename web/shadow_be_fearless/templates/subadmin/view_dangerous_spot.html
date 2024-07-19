@@ -1,0 +1,42 @@
+{% extends 'subadmin/subindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/sa_dangerous_addedbyuser_post">
+    <table class="pull-right">
+  <tr>
+    <td>Adder By:</td>
+    <td><select name="select" id="select" class="form-control">
+     <option value="user">user</option>
+        <option value="police">police</option>
+
+    </select></td>
+    <td><input type="submit" name="GO" id="GO" class="btn btn-info" value="GO" /></td>
+    </tr>
+</table>
+  <table  class="table table-bordered">
+    <tr>
+      <th>Sl.No</th>
+      <th>Location</th>
+      <th>Lattitude</th>
+      <th>Longitude</th>
+      <th>Adder By</th>
+      <th>&nbsp;</th>
+    </tr>
+       {% for i in data %}
+    <tr>
+      <td>{{loop.index }}&nbsp;</td>
+      <td>{{ i['Location'] }}&nbsp;</td>
+      <td>{{ i['Latitude'] }}&nbsp;</td>
+      <td>{{ i['Longitude'] }}&nbsp;</td>
+      <td>{{ i['Added_Dangerous_Spot'] }}&nbsp;</td>
+      <td><a href="http://maps.google.com/?q={{ i['Latitude'] }},{{ i['Longitude'] }}" class="btn btn-outline-success">Map</a></td>
+    </tr>
+       {% endfor %}
+  </table>
+
+
+
+</form>
+</body>
+{% endblock %}

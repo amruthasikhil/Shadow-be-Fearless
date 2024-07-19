@@ -1,0 +1,39 @@
+{% extends 'admin/admindex.html' %}
+{% block body %}
+
+<body>
+<form id="form1" name="form1" method="post" action="/adm_search_subadmin_post">
+
+<table class="pull-right">
+    <tr>
+      <td><input type="text" name="textfield" class="form-control"  required placeholder="Name" id="textfield" /></td>
+      <td><input type="submit" name="Search" class="btn btn-info" id="Search" value="Search" /></td>
+    </tr>
+  </table>
+<br />  <table  class="table table-bordered">
+  <tr>
+    <th>#</th>
+    <th>Name<br> Image</th>
+    <th>Gender<br>DOB</th>
+    <th>Address</th>
+    <th>Contact Info</th>
+    <th>&nbsp;</th>
+      <th></th>
+  </tr>
+     {% for i in data %}
+  <tr>
+    <td>{{ loop.index }}&nbsp;</td>
+    <td>{{ i['Name'] }}&nbsp;<br><img src="{{ i['Image'] }}" width="50" height="50"> </td>
+    <td>{{ i['Gender'] }}&nbsp;<br>{{ i['DOB'] }}&nbsp;</td>
+    <td>{{ i['City'] }}&nbsp;<br>{{ i['District'] }}&nbsp;<br>{{ i['State'] }}&nbsp;<br>{{ i['Pin'] }}&nbsp;</td>
+    <td>{{ i['Phone_Number'] }}&nbsp;<br>{{ i['Email_id'] }}&nbsp;</td>
+    <td><a href=" /adm_edit_subadmin/{{ i['Subadmin_id'] }}" class="btn btn-success">EDIT</a></td>
+    <td><a href="/adm_delete_subadmin/{{ i['Subadmin_id'] }}" class="btn btn-danger">DELETE</a></td>
+  </tr>
+    {% endfor %}
+</table>
+
+</form>
+</body>
+{% endblock %}
+
