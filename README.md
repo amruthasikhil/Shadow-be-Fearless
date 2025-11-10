@@ -15,7 +15,7 @@ The core technical challenge was developing a **robust, multi-user Flask-based R
 | Component | Technology | Role in the Project |
 | :--- | :--- | :--- |
 | **Back-End** | **Flask (Python)** | Core logic, routing, and processing of all web and mobile requests. |
-| **Database** | **SQLite (Managed via ORM)** | Data persistence for user accounts, location data, complaints, and vehicle/admin management. **(Update this to Flask-SQLAlchemy if you used it!)** |
+| **Database** | **SQLite** | Data persistence for user accounts, location data, complaints, and vehicle/admin management. |
 | **API** | **RESTful Services** | Built endpoints for data exchange between the Flask server, the Java mobile application, and web clients. |
 | **Front-End** | HTML, CSS, Bootstrap, JavaScript | Presentation layer for Admin, Subadmin, and Police web portals. |
 | **Mobile** | Java (Android) & Volley | Client-side application for real-time user interaction and emergency services. |
