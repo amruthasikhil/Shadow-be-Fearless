@@ -27,7 +27,7 @@ The core technical challenge was developing a **robust, multi-user Flask-based R
 
 This project demonstrates my ability to design, implement, and secure a multi-client Python Back-End system.
 
-* **API Design & Implementation:** Developed and documented **[X]** RESTful endpoints using Flask, covering key functionalities like user authentication, complaint submission, and real-time location updates.
+* **API Design & Implementation:** Developed and documented  RESTful endpoints using Flask, covering key functionalities like user authentication, complaint submission, and real-time location updates.
 * **Data Modeling & ORM:** Designed a complex relational data schema (including models for Users, Complaints, Locations, and specific administrative roles) and ensured data integrity using custom, optimized SQL queries for native SQLite integration.
 * **Geo-Spatial Logic:** Implemented back-end logic for processing **"Managing Safe and Dangerous Locations"** data, including photo analysis and verification workflows used by the Subadmin role.
 * **Asynchronous Tasks (Implied):** Handled the immediate, high-priority nature of the **"Shake Service"** emergency feature, ensuring the server could rapidly receive and notify police/admin users.
