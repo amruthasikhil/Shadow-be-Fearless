@@ -67,4 +67,4 @@ This project demonstrates my ability to design, implement, and secure a multi-cl
     ```bash
     python app.py  # Or whatever your main server file is
     ```
-5.  **Access:** The web application will be available at `http://127.0.0.1:5000/`. (Provide initial admin login credentials if possible).
+5.  **Access:** The web application will be available at `http://127.0.0.1:5000/`. 
