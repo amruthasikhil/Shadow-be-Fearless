@@ -15,7 +15,7 @@ The core technical challenge was developing a **robust, multi-user Flask-based R
 | Component | Technology | Role in the Project |
 | :--- | :--- | :--- |
 | **Back-End** | **Flask (Python)** | Core logic, routing, and processing of all web and mobile requests. |
-| **Database** | **SQLite** | Data persistence for user accounts, location data, complaints, and vehicle/admin management. |
+| **Database** | **SQLite** | Data persistence managed via direct Python sqlite3 module calls and custom SQL queries. |
 | **API** | **RESTful Services** | Built endpoints for data exchange between the Flask server, the Java mobile application, and web clients. |
 | **Front-End** | HTML, CSS, Bootstrap, JavaScript | Presentation layer for Admin, Subadmin, and Police web portals. |
 | **Mobile** | Java (Android) & Volley | Client-side application for real-time user interaction and emergency services. |
@@ -28,7 +28,7 @@ The core technical challenge was developing a **robust, multi-user Flask-based R
 This project demonstrates my ability to design, implement, and secure a multi-client Python Back-End system.
 
 * **API Design & Implementation:** Developed and documented **[X]** RESTful endpoints using Flask, covering key functionalities like user authentication, complaint submission, and real-time location updates.
-* **Data Modeling & ORM:** Designed the **[Y]** primary database models (e.g., User, Complaint, Location) and managed data integrity using Flask's ORM layer.
+* **Data Modeling & ORM:** Designed a complex relational data schema (including models for Users, Complaints, Locations, and specific administrative roles) and ensured data integrity using custom, optimized SQL queries for native SQLite integration.
 * **Geo-Spatial Logic:** Implemented back-end logic for processing **"Managing Safe and Dangerous Locations"** data, including photo analysis and verification workflows used by the Subadmin role.
 * **Asynchronous Tasks (Implied):** Handled the immediate, high-priority nature of the **"Shake Service"** emergency feature, ensuring the server could rapidly receive and notify police/admin users.
 * **Multi-Role Authorization:** Implemented robust **role-based access control (RBAC)** to restrict API access and features between Admin, Subadmin, and Police users based on the logged-in user's credentials.
